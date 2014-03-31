@@ -2,9 +2,9 @@ case node['platform_family']
 when 'debian'
   default['steam']['package_name'] = 'steam.deb'
 when 'mac_os_x'
-  default['steam']['package_name'] = ''
+  default['steam']['package_name'] = 'steam.dmg'
 when 'windows'
-  default['steam']['package_name'] = 'steamsetup.exe'
+  default['steam']['package_name'] = 'SteamSetup.exe'
 else
   error_msg = 'Steam cookbook only supports Windows, OS X & Debian-based distributions'
   Chef::Application.fatal!(error_msg)
